@@ -8,7 +8,7 @@ import requests
 st.set_page_config(page_title="Finland EV Charging Dashboard", layout="wide")
 
 API = os.environ.get("EV_API", "http://127.0.0.1:8000")  # local default
-CSV_PATH = "data/processed/chargers.csv"
+CSV_PATH = "data/chargers.csv"
 
 
 def clean_operator(x):
@@ -131,3 +131,4 @@ st.download_button(
     file_name="fin_ev_chargers.csv",
     mime="text/csv",
 )
+
